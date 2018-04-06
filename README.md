@@ -39,7 +39,7 @@ The _schemas_ (properties and data type of each property) used to store and retr
 
 ##### Projects
 
-* `id`: number, no need to provide it when creating projects, the database will generate it.
+* `id`: number, no need to provide it when creating projects, tnodhe database will generate it.
 * `name`: string, up to 128 characters long, required.
 * `description`: string, up to 128 characters long, required.
 * `completed`: boolean to indicate if the project has been completed, not required
