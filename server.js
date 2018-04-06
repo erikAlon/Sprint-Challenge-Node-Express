@@ -15,7 +15,7 @@ const projectsRouter = require("./subApps/projectsRouter.js");
 const actionsRouter = require("./subApps/actionsRouter.js");
 
 server.use(helmet());
-server.use(express());
+server.use(express.json());
 server.use("/api/projects", projectsRouter);
 server.use("/api/actions", actionsRouter);
 // server.use(logger);

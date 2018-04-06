@@ -10,8 +10,8 @@ router.get("/", (req, res) => {
       console.log("get func without params used!");
       res.status(200).json(response);
     })
-    .catch(er => {
-      res.status(500).json({ err: "Server error encountered.." });
+    .catch(error => {
+      res.status(500).json({ error: "Server error encountered.." });
     });
 });
 
@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
       console.log("get func used!");
       res.status(200).json(action);
     })
-    .catch(err => {
+    .catch(error => {
       res.status(500).json({ error: "Server error encountered.." });
     });
 });
@@ -39,7 +39,7 @@ router.post("/", (req, res) => {
     .then(response => {
       res.status(200).json(action);
     })
-    .catch(err => {
+    .catch(error => {
       res.status(500).json({
         error: "Server error encountered while attempting to add post.."
       });
@@ -55,7 +55,7 @@ router.delete("/:id", (req, res) => {
     .then(response => {
       res.status(200).json(response);
     })
-    .catch(err => {
+    .catch(error => {
       res
         .status(500)
         .json({ error: "Server error encountered while deleting post.." });
@@ -72,10 +72,10 @@ router.put("/:id", (req, res) => {
     .then(response => {
       res.status(200).json(response);
     })
-    .catch(err => {
+    .catch(error => {
       res
         .status(500)
-        .json({ err: "Server error encountered while updating post.." });
+        .json({ error: "Server error encountered while updating post.." });
     });
 });
 
